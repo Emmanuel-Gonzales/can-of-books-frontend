@@ -1,4 +1,6 @@
 import React from 'react';
+import axios from 'axios';
+import Carousel from 'react-bootstrap/Carousel';
 
 class BestBooks extends React.Component {
   constructor(props) {
@@ -10,8 +12,30 @@ class BestBooks extends React.Component {
 
   /* TODO: Make a GET request to your API to fetch all the books from the database  */
 
-  render() {
+    // getBooks = async () => {
+    //   let url = `${process.env.REACT_APP_SERVER}/books`
 
+    //   let bookData = await axios.get(url);
+
+    //   this.setState({
+    //     books: bookData.data
+    //   });
+    // };
+
+    getBooks = async() => {
+      let url = `${process.env.REACT_APP_SERVER}/books`;
+      let bookData = await axios.get(url);
+        this.setState({
+           books: bookData.data, 
+        });
+    }
+
+    componentDidMount(){
+      this.getBooks();
+    }
+
+    render() {
+      console.log(this.state.books);
     /* TODO: render all the books in a Carousel */
 
     return (
@@ -19,9 +43,24 @@ class BestBooks extends React.Component {
         <h2>My Essential Lifelong Learning &amp; Formation Shelf</h2>
 
         {this.state.books.length ? (
-          <p>Book Carousel coming soon</p>
+          <Carousel>
+            {this.state.books.map((book, index) => {
+              return(
+                <Carousel.Item key={index}>
+                  <img
+                  className='d-block w-100'
+                  src='https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fcdn.pixabay.com%2Fphoto%2F2016%2F09%2F10%2F17%2F18%2Fbook-1659717_960_720.jpg'
+                  alt='book pic'
+                  />
+                  <Carousel.Caption>
+                  <h3 style={{ backgroundColor: 'teal', borderRadius: '5px', width: 'max-content', margin: 'auto', padding: '5px' }}>Title:{book.title} Description:{book.description}</h3>
+                  </Carousel.Caption>
+                </Carousel.Item>
+              )
+            })}
+          </Carousel>
         ) : (
-          <h3>No Books Found :(</h3>
+          <h3>No Books Found :</h3>
         )}
       </>
     )

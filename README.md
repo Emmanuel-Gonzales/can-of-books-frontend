@@ -1,11 +1,30 @@
-# Start your own "Can of Books" App
+# Can of Books
 
-This repository has starter code to begin work on creating your own online bookshelf.
+**Author**: Emmanuel Gonzales
+**Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
 
-## What can books do?
+## Overview
 
-Books are life-changing. They have the power to enlighten, educate, entertain, heal, and help us grow. Build out this code base to create an web app to track what books have impacted you, and what's recommended to read next.
+This application is a webisite that displays the books of the users choice and keeps tha imformation in a database so the user can store their books.
 
-## Use this template
+## Getting Started
 
-Clone this repo to your own account with the green "Use this template" button. Then, add any collaborators. Now you are ready to start adding features! Deploy your site to let the world know which books have had the greatest impact on you, and what's recommended. Enjoy!
+The User would need to create a MONGODB profile to store their data and two sites to store their backend
+
+## Architecture
+
+MongoDB, nellify, render, react, axios
+
+## Change Log
+
+## Estimates
+
+## Credit and Collaborations
+
+Logistical
+What hours will you be available to communicate? - Class Hours
+ 
+
+What platform will you use to communicate (ie. Slack, phone …)? - Slack
+
+How often will you take breaks? - Evey Hour
