@@ -4,7 +4,6 @@ import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 
 import React, { Component } from 'react'
-import axios from "axios";
 
 export default class BookFormModal extends Component {
   // constructor(props){
