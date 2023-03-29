@@ -3,7 +3,9 @@ import Header from './Header';
 import Footer from './Footer';
 import BestBooks from './BestBooks';
 import About from './About'
+import BookFormModal from './BookFormModal'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
 import {
   BrowserRouter as Router,
   Routes,
@@ -11,6 +13,13 @@ import {
 } from "react-router-dom";
 
 class App extends React.Component {
+
+  handleOpenModal = () => {
+    this.setState({
+      showModal: true,
+    })
+  }
+
   render() {
     return (
       <>

@@ -23,7 +23,6 @@ MongoDB, nellify, render, react, axios
 
 Logistical
 What hours will you be available to communicate? - Class Hours
- 
 
 What platform will you use to communicate (ie. Slack, phone …)? - Slack
 
