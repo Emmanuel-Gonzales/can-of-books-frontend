@@ -49,9 +49,7 @@ export default class BookFormModal extends Component {
 
   render() {
     return (
-
       <div>
-
         <Modal
           show={this.props.show}
           onHide={this.props.handleClose}
